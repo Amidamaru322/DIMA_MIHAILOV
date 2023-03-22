@@ -2,7 +2,7 @@ package org.example.homework_nr_2;
 
 public class HomeWork2 {
     public static void main(String[] args){
-        int month = 3;
+        int month = 6;
         switch (month){
             case 1:  System.out.println("Январь");
             break;
@@ -37,11 +37,5 @@ public class HomeWork2 {
             System.out.println(index);
         }
     }
-        char star = '*';
-        while (star <='******') {
-            if (star + '*' == 0) {
-                System.out.println(star);
-            }
-            star++;
         }
-}}
+}
