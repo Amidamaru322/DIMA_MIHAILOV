@@ -1,23 +1,27 @@
 package org.example.homework_nr_3;
 
 public class TemperatureConverter {
-        public static double toCelsius(double fahrenheit) {
+    double fahrenheit;
+    double celsius;
+
+    public TemperatureConverter(double fahrenheit, double celsius) {
+        this.fahrenheit = fahrenheit;
+        this.celsius = celsius;
+    }
+
+    public double toCelsius() {
             return (fahrenheit - 32) * 5 / 9;
         }
 
-        public static double toFahrenheit(double celsius) {
+        public double toFahrenheit() {
             return celsius * 9 / 5 + 32;
         }
 
         public static void main(String[] args) {
-            TemperatureConverter tc = new TemperatureConverter();
-            double fahrenheit = 100.0;
-            double celsius = tc.toCelsius(fahrenheit);
-            System.out.println(fahrenheit + " градусов Фаренгейта = " + celsius + " градусов Цельсия");
-
-            celsius = 50.0;
-            fahrenheit = tc.toFahrenheit(celsius);
-            System.out.println(celsius + " градусов Цельсия = " + fahrenheit + " градусов Фаренгейта");
+            TemperatureConverter tc = new TemperatureConverter(100, 50 );
+            double cel = tc.toCelsius();
+            double fah = tc.toFahrenheit();
+            System.out.println(cel);
+            System.out.println(fah);
         }
     }
-
