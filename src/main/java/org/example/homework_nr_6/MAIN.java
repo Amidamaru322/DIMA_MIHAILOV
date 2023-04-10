@@ -6,5 +6,12 @@ public class MAIN {
         Invoice netbook = new Invoice("asuszenbook", "hoolygan", 2, 10.0);
         System.out.println(netbook.getPrice());
         System.out.println(netbook.getAmount());
+
+
+
+
+        Date newDate = new Date(29, 12, 1989);
+        System.out.println();
+        newDate.thisDate();
     }
 }

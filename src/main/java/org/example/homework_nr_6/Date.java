@@ -1,5 +1,7 @@
 package org.example.homework_nr_6;
 
+import java.sql.SQLOutput;
+
 public class Date {
     private Integer day;
     private Integer month;
@@ -35,8 +37,12 @@ public class Date {
     }
 
     public void setYear(Integer year) {
-        if (year >= 0 && year <=2024)
+        if (year >= 0 && year <=3000)
             this.year = year;
          else System.out.println("Invalid year: " + year);
+    }
+
+    public void thisDate(){
+        System.out.println("Date : " + day + "." + month + "." + year);
     }
 }
