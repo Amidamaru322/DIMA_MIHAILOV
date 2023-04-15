@@ -3,26 +3,20 @@ enum Month{
     JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER
 }
 enum weekday{
-    Monday(true, false),
-    Tuesday(true, false),
-    Wednesday(true, false),
-    Thursday(true, false),
-    Friday(true, false),
-    Saturday(false, true),
-    Sunday(false, true);
-    boolean isWeekday;
-    boolean isHoliday;
+    MONDAY(),
+    TUESDAY(),
+    WEDNESDAY(),
+    THURSDAY(),
+    FRIDAY(),
+    SATURDAY(),
+    SUNDAY();
 
-    weekday(boolean isWeekday, boolean isHoliday) {
-        this.isWeekday = isWeekday;
-        this.isHoliday = isHoliday;
-
-    }
-    public boolean isWeekday() {
-        return isWeekday;
+    public boolean isWeekDay() {
+        if (this == SUNDAY || this == SATURDAY) return false;
+        else return true;
     }
     public boolean isHoliday() {
-        return isHoliday;
+        return !isWeekDay();
     }
 }
 public class HomeWork5 {
@@ -33,13 +27,13 @@ public class HomeWork5 {
         System.out.println("==========================");
 
 
-        System.out.println(weekday.Monday.isWeekday());
-        System.out.println(weekday.Tuesday.isWeekday());
-        System.out.println(weekday.Wednesday.isWeekday());
-        System.out.println(weekday.Thursday.isWeekday());
-        System.out.println(weekday.Friday.isWeekday());
-        System.out.println(weekday.Saturday.isWeekday());
-        System.out.println(weekday.Sunday.isWeekday());
+        System.out.println(weekday.MONDAY.isWeekDay());
+        System.out.println(weekday.TUESDAY.isWeekDay());
+        System.out.println(weekday.WEDNESDAY.isWeekDay());
+        System.out.println(weekday.THURSDAY.isWeekDay());
+        System.out.println(weekday.FRIDAY.isWeekDay());
+        System.out.println(weekday.SATURDAY.isWeekDay());
+        System.out.println(weekday.SUNDAY.isWeekDay());
 
 
         System.out.println("==========================");
