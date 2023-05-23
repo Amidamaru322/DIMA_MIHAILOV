@@ -2,17 +2,19 @@ package org.example.homework_nr_9;
 
 import java.util.List;
 
-public class MeetingRoom{
-    List<Employee> AttenTraining;
+public class MeetingRoom {
+    List<AttenTraining> attendees;
 
-    public MeetingRoom(List<Employee> AttenTraining) {
-        this.AttenTraining = AttenTraining;
+    public MeetingRoom(List<AttenTraining> attendees) {
+        this.attendees = attendees;
     }
-  //  public void canTeaching() {
-    //     System.out.println("Can teaching in the meeting room...");
-    //     for (AttenTraining attendee : attendees) {
-    //        attendee.attendTraining(); // Вызываем метод attendTraining() для каждого объекта в списке attendees
-
+    public void conductTraining() {
+        System.out.println("Training session started in the meeting room...");
+        for (AttenTraining attendee : attendees) {
+            attendee.conductTraining();
+        }
+        System.out.println("Training session ended.");
+    }
 
 }
 

@@ -1,7 +1,6 @@
 package org.example.homework_nr_9;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,16 +9,20 @@ public class Main {
         Employee programmer1 = new Programmer("Vadim", "Peev", 31, "Java");
         Employee programmer2 = new Programmer("Mihail", "Cioban", 24, "Python");
 
-        List<Employee> AttenTraining = new ArrayList<>();
+        ArrayList<Employee> AttenTraining = new ArrayList<>();
         AttenTraining.add(manager1);
         AttenTraining.add(manager2);
         AttenTraining.add(programmer1);
         AttenTraining.add(programmer2);
 
+        Employee[] employees = {manager1, manager2, programmer1, programmer2};
 
-        for (Employee element:
-             AttenTraining) {
-            System.out.println("Attendee: " + element.getName() + " " + element.getSurname());
+        for (Employee employee : employees) {
+            if (employee instanceof Interview) {
+                ((Interview) employee).conductInterview();
+                System.out.println(employee.toString());
+            }
         }
     }
 }
+

@@ -1,6 +1,6 @@
 package org.example.homework_nr_9;
 
-public class Programmer extends Employee implements Training {
+public class Programmer extends Employee implements AttenTraining {
 
     String programmingLanguage;
 

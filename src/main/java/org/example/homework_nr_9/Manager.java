@@ -1,6 +1,6 @@
 package org.example.homework_nr_9;
 
-public class Manager extends Employee implements Training, Interview{
+public class Manager extends Employee implements AttenTraining, Interview{
 
     Integer teamSize;
 
